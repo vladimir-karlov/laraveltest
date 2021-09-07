@@ -23,13 +23,13 @@ class UsersTableSeeder extends Seeder
 		DB::statement('SET FOREIGN_KEY_CHECKS=0;');		
 		User::truncate();
         
-	    foreach(range(1, 3) as $i) 
+	    foreach(range(1, 5) as $i) 
 	    {
 		    User::create([
 		     'name' => $faker->name,
 		     'email' => $faker->unique()->email,
 		     'email_verified_at' => now(),
-		     'password' => bcrypt('password'),
+		     'password' => bcrypt('laraveltest'),
 		     'remember_token' => Str::random(10),
 		   ]);
     	}

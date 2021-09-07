@@ -17,11 +17,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+//Route::middleware('auth:api')->get('/user', 'UserController@show');
 
 Route::apiResources(
 	[
-		'tasks' => 'API\TasksController',
-		'users' => 'API\UsersController',
-		'tags' => 'API\TagsController'
+		'users' => 'API\UsersController'
 	]
 );

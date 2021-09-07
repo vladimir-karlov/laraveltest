@@ -46,9 +46,6 @@ Vue.component(HasError.name, HasError)
 Vue.component(AlertError.name, AlertError)
 Vue.component('multiselect', Multiselect)	
 
-//Pagination laravel-vue-pagination
-// Vue.component('pagination', require('laravel-vue-pagination'));
-
 Vue.component('User', require('./components/UserComponent.vue').default);
 
 const app = new Vue({

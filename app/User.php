@@ -5,10 +5,18 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Validator;
 
 class User extends Authenticatable
 {
     use Notifiable;
+
+/*
+    public const VALIDATION_RULES = [
+        'name' => ['required','max:128','regex:/^[a-zA-Z]+$/u', 'unique:users', 'name'],
+        'email' => ['required','email','unique:users'],
+    ];
+*/
 
     /**
      * The attributes that are mass assignable.
@@ -16,7 +24,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email',
+        'name', 'email', 'password'
     ];
 
     /**
